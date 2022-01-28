@@ -2,7 +2,7 @@
 Add here global page variables to use throughout your website.”
 -->
 +++
-@def prepath= “Math1MP3"
+@def prepath= JasonPekos.github.io/Math1MP3"
 author = "Jason Pekos"
 mintoclevel = 2
 
