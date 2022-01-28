@@ -319,6 +319,7 @@ def IsPrime(p:float) -> bool:
     return all([p % i for i in range(2,p)])
 ```
 
+
 ---
 
 ### Problem 26
@@ -332,6 +333,8 @@ def nDivisors(n:int) -> List[int]:
     """Returns all divisors of integer n"""
     return [j for j in range(1, n+1) if n % j == 0]
 ```
+
+---
 
 ### Problem 27
 
@@ -347,6 +350,8 @@ for i in range(1,101):
         print("I hate math")
 ```
 
+---
+
 ### Problem 28
 
 Create a list `A` so that `A[i] = sum of digits of i`, for $0 \leq i \leq 10000$, i.e.,
@@ -358,9 +363,12 @@ Create a list `A` so that `A[i] = sum of digits of i`, for $0 \leq i \leq 10000$
 A = [sum(map(int, str(i))) for i in range(1,10_000)]
 ```
 
+---
+
 ### Problem 29
 
 Create a list of the first 100 prime numbers.
+
 
 ```
 primes = []
