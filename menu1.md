@@ -8,7 +8,7 @@ rss = "Lab Recordings for 1MP3 Labs"
 
 ## Lab Recordings:
 
-Lab recordings will be posted here. If video quality is poor, wait a bit for youtube to finish uploading --- this takes some time. 
+Lab recordings will be posted here. If video quality is poor, wait a bit for youtube to finish uploading --- this takes some time. These recordings are not a substitute for coming to tutorial.
 
 
 - [Lab Two](https://www.youtube.com/watch?v=E4tUprkbZ1k)
