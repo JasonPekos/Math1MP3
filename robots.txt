@@ -1,4 +1,4 @@
-Sitemap: https://https://jasonpekos.github.io/Math1MP3//sitemap.xml
+Sitemap: https://jasonpekos.github.io/Math1MP3/sitemap.xml
 
 User-agent: *
 Disallow:
