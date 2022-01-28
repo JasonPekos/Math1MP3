@@ -9,7 +9,7 @@
 \toc
 ## Lab Two
 
-I'll add solutions here soon, you will see ... 
+I'll add more solutions here soon, you will see ... 
 
 ### Problem 9
 
@@ -135,6 +135,7 @@ def IsLeapYear(year: int) -> bool:
 ```
 
 ---
+
 ### Problem 17
 
 Find the sum of all digits used in writing down the numbers from 1 to
@@ -156,16 +157,87 @@ where $i^*$ is a number written without the number seven, e.g.
 
 $$S=\frac{1}{1}+\cdots+\frac{1}{6}+\frac{1}{8}+\cdots+\frac{1}{16}+\frac{1}{18}+\cdots+\frac{1}{69}+\frac{1}{80}+\cdots+\frac{1}{10000}$$
 
+```
+sum([int for int in range(1,10001) if "7" not in str(int)])
+```
+
+---
 
 ### Problem 19
 
+You are speeding on a highway and a police officer stops you. Write a
+code to compute the fine that you might have to pay (call the variable
+fine), based on the following rules (assume that the speed is a positive
+integer):
+
+- If your speed is 110 km/h or less, the fine is zero.
+- If your speed is between 111 and 130 inclusive, the fine is 150.
+- If your speed is above 130 km/h, the fine is 350.
+- If it is your birthday, your speed can be 5 km/h higher in all cases (use your actual birthday, or make one up)
+- For instance, if you drive 114 km/h on your birthday, your fine is zero.
+If you drive 118 km/h on your birthday, your fine \$150. If you drive
+114 km/h and it’s not your birthday, your fine is \$150.
+
+```
+def FineValue(speed: int, isBirthday: bool) -> int:
+
+    fine = 0
+
+    if(isBirthday == 1):
+        speed -= 5
+
+    if(111 <= speed <= 130):
+        fine = 150
+
+    if( 130< speed):
+        fine = 350
+
+    return fine
+```
+---
+
 ### Problem 20
 
+
+Let $M = 123456 ... 99979998999910000$ (i.e., M is obtained by writing all numbers from $1$ to $10000$ next to each other)
+
+-  How many digits does $M$ have?
+-  How many times does the number $7$ appear in $M$?
+
+```
+digits = 0
+sevens = 0
+for i in range(1, 10_001):
+    for j in str(i):
+        digits += 1
+        if j == "7":
+            sevens += 1
+
+print(digits)
+print(sevens)
+```
+
 ### Problem 21
+
 
 ### Problem 22
 
 ### Problem 23
+
+*Problem Twenty Three*
+
+Write a code that computes the transpose of some matrix M, of the form:
+
+`M=[[1,2,3],[4,5,6],[7,8,9]]`
+
+```
+from typing import List
+
+def Transpose(M:List[List]) -> List[List]:
+    """This transposes a matrix :D"""
+    return([[row[i] for row in M] for i in range(len(M[0]))])
+```
+
 
 ### Problem 24
 
