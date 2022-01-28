@@ -9,7 +9,7 @@
 \toc
 ## Lab Two
 
-I'll add more solutions here soon, you will see ... 
+Some of the solutions here are difficult to understand. If you want to understand them, you should come to tutorial! This list is not a substitute for tutorial (or office hours). 
 
 ### Problem 9
 
@@ -219,8 +219,46 @@ print(sevens)
 
 ### Problem 21
 
+*Problem Twenty One*
+
+Let $N = 124567891011121415 ...282940414244 ...999799989999$ (i.e., N is obtained by writing all numbers from 1 to 9999 that do not contain digit 3)
+
+- How many digits does N have?
+- Is $N$ divisible by three?
+
+```
+N = ""
+for i in range(1,10_000):
+    N += str(i)
+
+len(N)
+int(N) % 3
+```
+
+---
+
 
 ### Problem 22
+
+Create a list with the following pattern:
+
+write natural numbers in a sequence and remove all numbers which are either divisible by 3 or contain the digit 3. Find the 10,000th number in this list
+
+and find the 10'000th element in this list
+
+```
+aList = []
+val = 0
+
+while (len(aList) <= 10_001):
+    val += 1
+    if(val % 3 != 0  and "3" not in str(val)):
+        aList.append(val)
+
+aList[10_001]
+```
+---
+
 
 ### Problem 23
 
@@ -238,16 +276,96 @@ def Transpose(M:List[List]) -> List[List]:
     return([[row[i] for row in M] for i in range(len(M[0]))])
 ```
 
+---
 
 ### Problem 24
 
+Given a non-empty list of numbers (call in num), write a code to find the largest and the smallest numbers in num. Then compare with the built-in functions max(num) and min(num).
+
+```
+from typing import List, Union
+import math
+
+def BruteMin(num: List[Union[int, float]]) -> Union[int, float]:
+    """Returns the smallest number from a list of numbers"""
+    min = math.inf
+    for i in num:
+        if(i < min):
+            min = i
+    
+    return min 
+
+
+def BruteMax(num: List[Union[int, float]]) -> Union[int, float]:
+    """Returns the largest number from a list of numbers"""
+    max = -math.inf
+    for i in num:
+        if(i > max):
+            max = i
+    
+    return max 
+```
+
+---
+
 ### Problem 25
+
+Define the function is prime(p) which returns True if $p$ is a prime number and False otherwise. You can assume that $p$ is an integer, $p \geq 1$.
+
+```
+def IsPrime(p:float) -> bool:
+    """Checks if a number is prime!"""
+    if p == 1: return False
+    return all([p % i for i in range(2,p)])
+```
+
+---
 
 ### Problem 26
 
+Define the function all divisors(n), where $n > 0$, which stores all divisors of $n$ (including $1$ and $n$) into a list.
+
+```
+from typing import List
+
+def nDivisors(n:int) -> List[int]:
+    """Returns all divisors of integer n"""
+    return [j for j in range(1, n+1) if n % j == 0]
+```
+
 ### Problem 27
+
+Print “I love math” once, then “I hate math” once; then “I love math” two times, then “I hate math” once; then “I love math” three times, then “I hate math” once; then “I love math” four times, then “I hate math” once, and so on, until a total of 100 lines are printed.
+
+```
+val = 0
+for i in range(1,101):
+    if i % 2 != 0:
+        val += 1
+        print(val*"I love math ")
+    else:
+        print("I hate math")
+```
 
 ### Problem 28
 
+Create a list `A` so that `A[i] = sum of digits of i`, for $0 \leq i \leq 10000$, i.e.,
+
+`A = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4,..., 1]`
+
+
+```
+A = [sum(map(int, str(i))) for i in range(1,10_000)]
+```
+
 ### Problem 29
 
+```
+primes = []
+counter = 1
+while len(primes) < 100:
+    #Using problem 25 function `IsPrime`
+    if(IsPrime(counter) == 1):
+        primes.append(counter)
+    counter += 1
+```
