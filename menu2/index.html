@@ -190,6 +190,7 @@ def BruteMax(num: List[<span class=hljs-built_in >Union</span>[int, float]]) -&g
 def nDivisors(n:int) -&gt; List[int]:
     <span class=hljs-string >&quot;&quot;&quot;Returns all divisors of integer n&quot;&quot;&quot;</span>
     <span class=hljs-keyword >return</span> [j <span class=hljs-keyword >for</span> j <span class=hljs-keyword >in</span> range(<span class=hljs-number >1</span>, n+<span class=hljs-number >1</span>) <span class=hljs-keyword >if</span> n % j == <span class=hljs-number >0</span>]</code></pre>
+<hr />
 <h3 id=problem_27 ><a href="#problem_27" class=header-anchor >Problem 27</a></h3>
 <p>Print “I love math” once, then “I hate math” once; then “I love math” two times, then “I hate math” once; then “I love math” three times, then “I hate math” once; then “I love math” four times, then “I hate math” once, and so on, until a total of 100 lines are printed.</p>
 <pre><code class="julia hljs">val = <span class=hljs-number >0</span>
@@ -199,10 +200,12 @@ def nDivisors(n:int) -&gt; List[int]:
         print(val*<span class=hljs-string >&quot;I love math &quot;</span>)
     <span class=hljs-keyword >else</span>:
         print(<span class=hljs-string >&quot;I hate math&quot;</span>)</code></pre>
+<hr />
 <h3 id=problem_28 ><a href="#problem_28" class=header-anchor >Problem 28</a></h3>
 <p>Create a list <code>A</code> so that <code>A&#91;i&#93; &#61; sum of digits of i</code>, for <span class=katex ><span class=katex-mathml ><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>≤</mo><mi>i</mi><mo>≤</mo><mn>10000</mn></mrow><annotation encoding="application/x-tex">0 \leq i \leq 10000</annotation></semantics></math></span><span class=katex-html  aria-hidden=true ><span class=base ><span class=strut  style="height:0.78041em;vertical-align:-0.13597em;"></span><span class=mord >0</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span><span class=mrel >≤</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span></span><span class=base ><span class=strut  style="height:0.79549em;vertical-align:-0.13597em;"></span><span class="mord mathnormal">i</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span><span class=mrel >≤</span><span class=mspace  style="margin-right:0.2777777777777778em;"></span></span><span class=base ><span class=strut  style="height:0.64444em;vertical-align:0em;"></span><span class=mord >10000</span></span></span></span>, i.e.,</p>
 <code>A &#61; &#91;0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4,..., 1&#93;</code>
 <pre><code class="julia hljs">A = [sum(map(int, str(i))) <span class=hljs-keyword >for</span> i <span class=hljs-keyword >in</span> range(<span class=hljs-number >1</span>,<span class=hljs-number >10_000</span>)]</code></pre>
+<hr />
 <h3 id=problem_29 ><a href="#problem_29" class=header-anchor >Problem 29</a></h3>
 <p>Create a list of the first 100 prime numbers.</p>
 <pre><code class="julia hljs">primes = []
