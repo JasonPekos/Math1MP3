@@ -360,11 +360,13 @@ A = [sum(map(int, str(i))) for i in range(1,10_000)]
 
 ### Problem 29
 
+Create a list of the first 100 prime numbers.
+
 ```
 primes = []
 counter = 1
 while len(primes) < 100:
-    #Using problem 25 function `IsPrime`
+    # Using problem 25 function `IsPrime`
     if(IsPrime(counter) == 1):
         primes.append(counter)
     counter += 1
