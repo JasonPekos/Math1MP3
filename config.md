@@ -1,8 +1,9 @@
 <!--
-Add here global page variables to use throughout your website.
+Add here global page variables to use throughout your website.”
 -->
 +++
-author = "Septimia Zenobia"
+@def prepath= “Math1MP3"
+author = "Jason Pekos"
 mintoclevel = 2
 
 # Add here files or directories that should be ignored by Franklin, otherwise
