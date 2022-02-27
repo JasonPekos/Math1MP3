@@ -459,7 +459,7 @@ We can rewrite Newton's method using this as:
 
 ```python
 def Newton(function, x0:float, tol:float, max_steps:int) -> float:
-    """A simple Newton's method solution to a function with a known derivative."""
+    """A simple Newton's method solution to a function with an unknown derivative."""
     ratio = math.inf
     x = x0
     steps = 0
@@ -512,7 +512,7 @@ This numerical computation of the derivative is much more well behaved, for nume
 
 ```python
 def Newton(function, x0:float, tol:float, max_steps:int) -> float:
-    """A simple Newton's method solution to a function with a known derivative."""
+    """A simple Newton's method solution to a function with an unknown derivative."""
     ratio = math.inf
     x = x0
     steps = 0
