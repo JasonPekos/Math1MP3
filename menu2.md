@@ -588,3 +588,37 @@ plt.plot(x, yTrue)
 ```
 
 ![taylor's version](https://raw.githubusercontent.com/JasonPekos/Math1MP3/main/_assets/taylor.png)
+
+### Problem 61
+
+Write a code for the function cos_series(x,tol=1e-7,max terms=15)
+that calculates an approximate value of $cos(x)$, where $x \in [0, 2\pi)$.
+You will use a partial sum of the Maclaurin series for $cos(x)$, and end it,
+depending on which of the following two events happens first: 15 terms
+are added, or the next term to be added is less than the tolerance tol.
+
+$$cos(x) = \sum_0^{1000} \frac{-1^n}{2n!} x^{2n}$$
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+def cos_series_2(x: float, tol = 1e-7, max_steps = 15):
+    """Cos taylor series approximation"""
+    out = 0
+    n = 0
+    while(abs(out-np.math.cos(x)) > tol):
+        out += (((-1)**n)/(np.math.factorial(2*n)))*x**(2*n)
+        n += 1
+        if n >= max_steps:
+            return out
+    return out
+
+x = np.linspace(0,4,2000)
+yVals = [cos_series_2(xi) for xi in x]
+yVals3 = [cos_series_2(xi, max_steps = 3) for xi in x]
+yTrue = [np.math.cos(xi) for xi in x]
+plt.plot(x, yVals, '_')
+plt.plot(x, yVals3, '-')
+plt.plot(x, yTrue)
+```
