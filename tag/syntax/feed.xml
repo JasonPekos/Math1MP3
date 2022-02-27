@@ -9,14 +9,14 @@
 
   <channel>
     <title>
-      <![CDATA[  {{fd2rss website_title}}  ]]>
+      <![CDATA[  Math1MP3 Labs  ]]>
     </title>
-    <link> {{website_url}} </link>
+    <link> https://jasonpekos.github.io/Math1MP3/ </link>
     <description>
-      <![CDATA[  {{fd2rss website_description}}  ]]>
+      <![CDATA[  Lab Resources  ]]>
     </description>
     <atom:link
-      href="{{fd_rss_feed_url}}"
+      href="https://jasonpekos.github.io/Math1MP3/feed.xml"
       rel="self"
       type="application/rss+xml" />
 
