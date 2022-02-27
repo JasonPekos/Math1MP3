@@ -566,7 +566,7 @@ Write a code for the function cos_series(x) which calculates an approximate valu
 Maclaurin series) which consists of the first 25 terms. If $x$ is not in
 $[0, 2π)$, reduce it to that interval.
 
-$$cos(x) = \sum_0^{1000} \frac{-1^n}{2n!} x^{2n}$$.
+$$cos(x) = \sum_0^{1000} \frac{-1^n}{2n!} x^{2n}$$
 
 n.b. That I am not going to reduce the angle in my solution, because I think it leads to a nicer graph, and I just solved that in the previous question.
 
@@ -586,3 +586,5 @@ yTrue = [np.math.cos(xi) for xi in x]
 plt.plot(x, yVals)
 plt.plot(x, yTrue)
 ```
+
+![taylor's version](https://raw.githubusercontent.com/JasonPekos/Math1MP3/main/_assets/taylor.png)
