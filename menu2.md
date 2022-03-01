@@ -625,7 +625,6 @@ plt.plot(x, yVals3, '-')
 plt.plot(x, yTrue)
 ```
 
-![taylor's version](https://raw.githubusercontent.com/JasonPekos/Math1MP3/main/_assets/taylors_version_2.png
-)
+![taylor's version2](https://raw.githubusercontent.com/JasonPekos/Math1MP3/main/_assets/taylors_version_2.png)
 
 ---
