@@ -423,7 +423,7 @@ def fPrime(x: complex) -> complex:
     return 3*x**2 -2*x +6*np.cos(2*x - 2) 
 ```
 
-The question asks for these both, and so the assumption is that it wants an analytic solution to the derivative. We will also extend the question, and explore the case where the derivative is not computed analytically, and so not required as a function argument.
+The question asks for these both, and so the assumption is that it wants an analytic solution to the derivative. We will also extend the question, and explore the case where the derivative is not computed analytically, and so not required as a function argument. The solution for Newton's method follows:
 
 ```python
 import numpy as np
@@ -445,7 +445,7 @@ def Newton(function, derivative, x0:float, tol:float, max_steps:int) -> float:
     return(x)
 ```
 
-We would like to extend this into the case where the derivative $f(x)$ is not know a priori (it isn't in most real life scenarios). To do this, we write a function to compute the derivative $f(x)$ of some given input $F(x)$. This is a separate problem in the worksheet (**68**), but we solve it here instead. To find the derivative, we go back to calculus one, and use the different quotient:
+We would like to extend this into the case where the derivative $f(x)$ is not know a priori (it isn't in most real life scenarios). To do this, we write a function to compute the derivative $f(x)$ of some given input $F(x)$. This is a separate problem in the worksheet (**68**), but we solve it here instead. To find the derivative, we go back to calculus one, and use the difference quotient:
 
 $$f(x) = \frac{F(x + h) - F(x)}{h}$$
 
@@ -589,6 +589,8 @@ plt.plot(x, yTrue)
 
 ![taylor's version](https://raw.githubusercontent.com/JasonPekos/Math1MP3/main/_assets/taylor.png)
 
+---
+
 ### Problem 61
 
 Write a code for the function cos_series(x,tol=1e-7,max terms=15)
@@ -622,3 +624,8 @@ plt.plot(x, yVals, '_')
 plt.plot(x, yVals3, '-')
 plt.plot(x, yTrue)
 ```
+
+![taylor's version](https://raw.githubusercontent.com/JasonPekos/Math1MP3/main/_assets/taylors_version_2.png
+)
+
+---
